@@ -1,0 +1,11 @@
+FROM ubuntu
+RUN apt-get update -y
+RUN apt-get install maven openjdk-8-jdk -y
+
+WORKDIR /src
+
+COPY pom.xml .
+COPY src src
+
+RUN mvn verify
+CMD cd target; exec java -Xmx8m -Xms8m -jar words.jar
