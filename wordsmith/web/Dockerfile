@@ -1,0 +1,7 @@
+FROM golang
+
+COPY dispatcher.go .
+
+RUN go build dispatcher.go
+
+CMD ["./dispatcher"]
