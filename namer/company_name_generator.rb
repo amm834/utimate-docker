@@ -5,12 +5,12 @@ class CompanyNameGenerator < Sinatra::Base
     name = Faker::Company.name
     bs = Faker::Company.bs
     <<-HTML
-      <!DOCTYPE html> 
+      <!DOCTYPE html>
       <html>
         <style>
           h1, h2 {
             font-family: Georgia, Times New Roman, Times, serif;
-            color: royalblue;
+            color: red;
             margin: 0;
           }
         </style>
